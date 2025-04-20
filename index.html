@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Downloader</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    form { max-width: 600px; margin: auto; }
+    input { width: 100%; padding: 0.5em; margin: 0.5em 0; }
+    button { padding: 0.5em 1em; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Social Media Downloader</h1>
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+  <section class="instructions">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Copy the URL of the video or image you want to download.</li>
+      <li>Paste it into the input field below.</li>
+      <li>Click the "Download" button.</li>
+      <li>Save the downloaded file when prompted.</li>
+    </ol>
+  </section>
+  <form method="post">
+    <input type="text" name="url" placeholder="Enter video or image URL" required>
+    <button type="submit">Download</button>
+  </form>
+</body>
+</html>
